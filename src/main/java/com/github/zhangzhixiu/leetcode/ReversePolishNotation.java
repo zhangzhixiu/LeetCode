@@ -14,12 +14,10 @@ public class ReversePolishNotation
         	tokenList.add(tokens[i]);
         }
         
-        reverse(tokenList);
-        
-        return Integer.valueOf(tokenList.get(0));
+        return reverse(tokenList);
     }
     
-    private void reverse(List<String> tokenList)
+    private int reverse(List<String> tokenList)
     {
 //    	ListIterator<String> iter = tokenList.listIterator();
 //        while(iter.hasNext())
@@ -39,6 +37,28 @@ public class ReversePolishNotation
 //        	}
 //        }
     	
+//    	Stack<String> stack = new Stack<String>();
+//    	
+//    	for(int i=0; i<tokenList.size(); i++)
+//    	{
+//    		String token = tokenList.get(i);
+//    		
+//    		if(isOperator(token))
+//    		{
+//    			String n2 = stack.pop();
+//    			String n1 = stack.pop();
+//    			int temp = calculate(n1, n2, token);
+//    			
+//    			stack.push(String.valueOf(temp));
+//    		}
+//    		else
+//    		{
+//    			stack.push(token);
+//    		}
+//    	}
+//    	
+//    	return Integer.valueOf(stack.pop());
+    	
     	for(int i=0; i<tokenList.size(); i++)
     	{
     		if(isOperator(tokenList.get(i)))
@@ -51,6 +71,8 @@ public class ReversePolishNotation
     			tokenList.set(i, String.valueOf(temp));
     		}
     	}
+    	
+    	return Integer.valueOf(tokenList.get(0));
     }
     
     private Boolean isOperator(String token)

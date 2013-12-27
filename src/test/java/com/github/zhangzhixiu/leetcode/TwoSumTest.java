@@ -3,6 +3,7 @@
  */
 package com.github.zhangzhixiu.leetcode;
 
+import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -23,6 +24,12 @@ public class TwoSumTest
 	public void init()
 	{
 		twoSum = new TwoSum();
+	}
+	
+	@After
+	public void end()
+	{
+		twoSum = null;
 	}
 	
 	@Test

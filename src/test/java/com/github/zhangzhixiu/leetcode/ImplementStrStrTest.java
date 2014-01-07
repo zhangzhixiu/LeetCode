@@ -47,6 +47,6 @@ public class ImplementStrStrTest
 	@Test
 	public void test2()
 	{
-		Assert.assertNull(iss.strStr("", ""));
+		Assert.assertEquals("", iss.strStr("", ""));
 	}
 }

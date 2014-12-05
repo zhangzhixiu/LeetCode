@@ -16,7 +16,7 @@ public class ReverseWordsInAString {
     Stack<String> stack = new Stack<String>();
     String str = "";
     for (int i = 0; i < c.length; i++) {
-      if (c[i] == " ".charAt(0)) {
+      if (c[i] == ' ') {
         push(stack, str);
         str = "";
       } else {
